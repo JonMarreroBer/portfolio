@@ -5,12 +5,12 @@ import Hero from "./Hero";
 
 const Portfolio = () => {
   const images = [
-    "/Jonathan.jpg",
-    "/SHPE.JPG",
-    "/NoPressure.jpg",
-    "/ArmyPT.jpg",
-    "/ArmyOCP.jpg",
-    "/Presentation.jpg",
+    "./Jonathan.jpg",
+    "./SHPE.JPG",
+    "./NoPressure.jpg",
+    "./ArmyPT.jpg",
+    "./ArmyOCP.jpg",
+    "./Presentation.jpg",
   ]; // Add your image paths
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -57,13 +57,13 @@ const Portfolio = () => {
         <h3 className={styles.skillsHeading}>Languages:</h3>
         <div className={styles.languageGrid}>
           {[
-            { src: "/cpp.png", label: "C/C++" },
-            { src: "/Python.png", label: "Python" },
-            { src: "/Verilog.png", label: "Verilog" },
-            { src: "/JS.png", label: "Javascript" },
-            { src: "/HTML.png", label: "HTML" },
-            { src: "/Css.png", label: "CSS" },
-            { src: "/php.png", label: "PHP" },
+            { src: "./cpp.png", label: "C/C++" },
+            { src: "./Python.png", label: "Python" },
+            { src: "./Verilog.png", label: "Verilog" },
+            { src: "./JS.png", label: "Javascript" },
+            { src: "./HTML.png", label: "HTML" },
+            { src: "./Css.png", label: "CSS" },
+            { src: "./php.png", label: "PHP" },
           ].map(({ src, label }) => (
             <div key={label} className={styles.skillItem}>
               <img className={styles.skillIcon} src={src} alt={label} />
@@ -77,8 +77,8 @@ const Portfolio = () => {
         <h3 className={styles.skillsHeading}>Simulation & Analysis Tools:</h3>
         <div className={styles.toolsGrid}>
           {[
-            { src: "/MATLAB.png", label: "MATLAB" },
-            { src: "/Simulink.png", label: "Simulink" },
+            { src: "./MATLAB.png", label: "MATLAB" },
+            { src: "./Simulink.png", label: "Simulink" },
           ].map(({ src, label }) => (
             <div key={label} className={styles.skillItem}>
               <img className={styles.skillIcon} src={src} alt={label} />
@@ -94,8 +94,8 @@ const Portfolio = () => {
         <h3 className={styles.skillsHeading}>Database Management:</h3>
         <div className={styles.databaseGrid}>
           {[
-            { src: "/SQL.png", label: "PostgreSQL" },
-            { src: "/MySQL.png", label: "MySQL" },
+            { src: "./SQL.png", label: "PostgreSQL" },
+            { src: "./MySQL.png", label: "MySQL" },
           ].map(({ src, label }) => (
             <div key={label} className={styles.skillItem}>
               <img className={styles.skillIcon} src={src} alt={label} />
@@ -109,8 +109,8 @@ const Portfolio = () => {
         <h3 className={styles.skillsHeading}>Computer-Aided Design(CAD):</h3>
         <div className={styles.cadGrid}>
           {[
-            { src: "/AltiumDesigner.png", label: "Altium Designer" },
-            { src: "/orCAD.png", label: "Cadence" },
+            { src: "./AltiumDesigner.png", label: "Altium Designer" },
+            { src: "./orCAD.png", label: "Cadence" },
           ].map(({ src, label }) => (
             <div key={label} className={styles.skillItem}>
               <img className={styles.skillIcon} src={src} alt={label} />
@@ -125,10 +125,10 @@ const Portfolio = () => {
       <h3 className={styles.skillsHeading}>Frameworks & Tools:</h3>
       <div className={styles.frameworksGrid}>
         {[
-          { src: "/pyTorch.png", label: "PyTorch" },
-          { src: "/TensorFlow.png", label: "Tensorflow" },
-          { src: "/React.png", label: "ReactJs" },
-          { src: "/Laravel.png", label: "Laravel PHP" },
+          { src: "./pyTorch.png", label: "PyTorch" },
+          { src: "./TensorFlow.png", label: "Tensorflow" },
+          { src: "./React.png", label: "ReactJs" },
+          { src: "./Laravel.png", label: "Laravel PHP" },
         ].map(({ src, label }) => (
           <div key={label} className={styles.skillItem}>
             <img className={styles.skillIcon} src={src} alt={label} />

@@ -22,12 +22,12 @@ const Navbar = () => {
         <nav className={styles.header}>
             <img
                 className={styles.logo}
-                src="/CoquiandFlag.png"  // Fixed Path
+                src="./CoquiandFlag.png"  // Fixed Path
                 alt="Logo"
             />
             <img
                 className={styles.menuIcon}
-                src="/Menu.png"  // Fixed Path
+                src="./Menu.png"  // Fixed Path
                 alt="Menu"
                 onClick={toggleMenu}
             />

@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             <img
-                src= "/Belleza.jpg" // Fixed Path
+                src= "./Belleza.jpg" 
                 alt="Profile"
                 className={styles.heroBackground}
             />
