@@ -1,0 +1,611 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolio {
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: rgba(65, 143, 194, 1);
+  font-family:
+  Arial Black,
+  -apple-system,
+  Roboto,
+  Helvetica,
+  sans-serif;
+  caret-color: transparent;
+}
+
+ /* Header */
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 5vw;
+  background-color: rgba(28, 105, 149, 1);
+}
+
+.header ul {
+  list-style: none;
+}
+
+.logo {
+  object-fit: contain;
+  width: 145px;
+  display: block;
+}
+
+.menuIcon {
+  width: 50px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 10; /* Ensures it is above other elements */
+}
+
+.menuList {
+  position: absolute;
+  top: 130px; /* Below the navbar */
+  right: 175px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  width: 150px;
+  display: block; /* Hidden by default */
+  flex-direction: column;
+  opacity: 0; /* Invisible initially */
+  transform: translateY(-10px); /* Move slightly up */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+.show{
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuList li {
+  padding: 10px;
+  text-align: center;
+}
+
+.menuList li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.menuList li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroText {
+  animation: fadeIn 3s ease-out forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.heroBackground {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.name {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.highlight {
+  color: rgba(226, 59, 70, 1);
+}
+
+.title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Skills Section */
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(28, 105, 149, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(19%); /* Centers the container */
+}
+
+.aboutSlideshow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.aboutContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-align: left;
+}
+
+@media (max-width: 4000px) {
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutSlideshow,
+  .aboutContent {
+    width: 100%;
+  }
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 64px;
+  font-weight: 400;
+  text-decoration: underline;
+  margin-top: 119px;
+  text-align: center; /* Ensures title is centered */
+}
+
+.skillsContainer {
+  width: 30%;
+  max-width: 1301px;
+  margin: auto; /* Centers the entire container */
+  background: rgba(28, 105, 149, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 37%;
+  transform: translateX(-65%) translateY(-75.5%); /* Centers the container */
+}
+
+
+.skillsRow {
+  display: flex;
+  justify-content: center; /* Center contents horizontally */
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.languagesColumn,
+.toolsColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Allow content to dictate width */
+}
+
+
+.skillsTitle {
+  text-decoration: underline;
+  font-size: 34px;
+  color: white;
+  text-align: center;
+}
+
+.skillsHeading {
+  font-size: 34px;
+  color: white;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.languageGrid,
+.toolsGrid,
+.databaseGrid,
+.cadGrid,
+.frameworksGrid {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 75px;
+}
+
+.skillLabel {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.additionalSkills {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.frameworksSection {
+  margin-top: 13px;
+  text-align: center;
+}
+
+.slideshowContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+.slideshowControls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 18px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.controlButton:hover {
+  background-color: gray;
+}
+
+
+/* Projects Section */
+.projectsContainer {
+  width: 100%;
+  margin-top: 17px;
+
+}
+
+.projectTitle {
+  color: white;
+  font-size: 48px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Flex container for images */
+.projectImages{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tourniquetImages,
+.projectRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Standardized image size */
+.projectImage,
+.uniformImage {
+  width: 50%;
+  object-fit: contain;
+}
+
+.tourniquetImage{
+  width: 20%;
+  object-fit: contain;
+}
+
+/* Grouped tourniquet images */
+.imageGroup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Align all ML & processor projects */
+.projectRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.projectItem {
+  text-align: center;
+  width: 30%;
+}
+
+.uniformImage {
+  width: 50%;
+  max-width: 900px;
+}
+
+.exploreSection {
+  display: flex;
+  margin-top: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.exploreContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.exploreTitle {
+  color: white;
+  font-size: 48px;
+  font-family:
+    Arial Black,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+}
+
+.exploreIcon {
+  width: 149px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.exclamation {
+  color: white;
+  font-size: 48px;
+  font-family:
+    Arial Black,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+}
+
+.aboutContainer {
+  display: flex;
+  margin-top: 119px;
+  width: 100%;
+  max-width: 1379px;
+}
+
+.aboutImage {
+  width: 63%;
+  aspect-ratio: 0.98;
+  object-fit: contain;
+}
+
+.aboutContent {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:
+    Arial Black,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: 520;
+}
+
+.aboutTitle {
+  font-size: 48px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.aboutText {
+  margin-top: 14px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.aboutHighlight {
+  color: white;
+}
+
+.contactInfo {
+  margin-top: 40px;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family:
+  Arial Black,
+  -apple-system,
+  Roboto,
+  Helvetica,
+  sans-serif;
+  font-weight: 500;
+}
+
+.thankYou {
+  color: white;
+  font-size: 64px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.contactItem {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.contactIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 48px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 20px;
+    white-space: initial;
+  }
+
+  .logo {
+    padding-top: 100px;
+    white-space: initial;
+  }
+
+  .heroContent {
+    flex-direction: column;
+  }
+
+  .heroImage,
+  .heroText {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .sectionTitle {
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .skillsRow {
+    flex-direction: column;
+  }
+
+  .languagesColumn,
+  .toolsColumn {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .projectsContainer {
+    padding: 20px;
+  }
+
+  .tourniquetImages {
+    flex-direction: column;
+  }
+
+  .imageGroup {
+    width: 100%;
+  }
+
+  .tourniquetImageLarge {
+    width: 100%;
+  }
+
+  .mlProject {
+    flex-direction: column;
+  }
+
+  .mlSection,
+  .otherProjects {
+    width: 100%;
+  }
+
+  .exploreSection {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .aboutImage,
+  .aboutContent {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .thankYou {
+    font-size: 40px;
+  }
+
+  .contactInfo {
+    padding: 0 20px;
+  }
+}
